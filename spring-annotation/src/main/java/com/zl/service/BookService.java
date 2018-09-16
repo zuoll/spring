@@ -1,5 +1,8 @@
 package com.zl.service;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Target;
+
 import javax.annotation.Resource;
 import javax.inject.Inject;
 
@@ -34,6 +37,18 @@ public class BookService {
 	 * <p>AutowiredAnnotationBeanPostProcessor 是这些注解的核心处理器<br>
 	 * org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor<init> <br> 
 	 * JSR-330 'javax.inject.Inject' annotation found and supported for autowiring <br>
+	 * 
+	 * 
+	 * @Autowired 的高级用法须知：
+	 * @Target({ElementType.CONSTRUCTOR, ElementType.METHOD, ElementType.PARAMETER, ElementType.FIELD, ElementType.ANNOTATION_TYPE})<br>
+	 * @Autowired 可以标注在构造器，方法, 参数，属性
+	 * 
+	 * 属性：这种方式就是上面的方式，最常用
+	 * 构造器：
+	 * setter方法:
+	 * 参数：
+	 * 
+	 * 
 	 */
 
 //	@Qualifier("bookDao")

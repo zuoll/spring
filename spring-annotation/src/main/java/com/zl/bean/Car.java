@@ -1,7 +1,9 @@
 package com.zl.bean;
 
-public class Car {
+import org.springframework.stereotype.Component;
 
+@Component
+public class Car {
 	
 	public Car() {
 		System.out.println("Car.Car()...执行无参数的构造函数创建对象。。。");
