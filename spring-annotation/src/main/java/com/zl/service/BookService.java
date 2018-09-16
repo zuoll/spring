@@ -1,5 +1,7 @@
 package com.zl.service;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -21,11 +23,16 @@ public class BookService {
 	 * 	但是 我们可以指定没有该bean，也不影响@Autowired(required=false).
 	 * 5> @Primary注解进行首选设置，也就是发现多个类型相同的bean，选中这个被Primary标注的bean，属性名字查找被覆盖
 	 * 但是如果要强行使用某个bean,可以用Qualifier，这个会覆盖primary
+	 * 
+	 * 
+	 * 和Autowired类似的两个java规范中定义的两个注解
+	 *1，@Resource
 	 *  
 	 */
 
-	@Qualifier("bookDao")
-	@Autowired(required = false)
+//	@Qualifier("bookDao")
+//	@Autowired(required = false)
+	@Resource
 	BookDao bookDao;
 
 	public void print() {
