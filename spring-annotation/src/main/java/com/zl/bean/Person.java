@@ -1,15 +1,12 @@
 package com.zl.bean;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.env.Environment;
 
 public class Person {
-	
-	
 	/**
 	 * @value注解给属性赋值
 	 * 1，SLEL表达式
-	 * 2，jibenzhi
+	 * 2，基本类型的值
 	 * 3，属性配置文件，其实本质是spring环境变量中的值Environment
 	 */
 	

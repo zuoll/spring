@@ -6,8 +6,6 @@ import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
-import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 
 import com.zl.bean.Person;
 
