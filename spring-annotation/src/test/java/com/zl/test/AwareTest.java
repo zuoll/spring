@@ -4,29 +4,21 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.zl.bean.Boss;
-import com.zl.bean.Car;
-import com.zl.bean.Color;
-import com.zl.config.AutowireMainConfig2;
+import com.zl.bean.Red;
+import com.zl.config.AwareIntfMainConfig3;
 
-public class AutoWireTest2 {
+public class AwareTest {
 	
 	@Test
 	public void test01() {
-		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AutowireMainConfig2.class);
-		
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AwareIntfMainConfig3.class);
 		this.print(applicationContext);
-		
 		System.out.println("===================容器创建完成======================");
 		
-//		Boss bean = applicationContext.getBean(Boss.class);
-//		System.out.println("===>"+bean);
+		System.out.println(applicationContext.hashCode());
+		Red bean = applicationContext.getBean(Red.class);
+		System.out.println(bean);
 		
-		Color bean1 = applicationContext.getBean(Color.class);
-		System.out.println(bean1);
-		
-		Car car = applicationContext.getBean(Car.class);
-		System.out.println("====>"+car);
 	}
 	
 	public void print(ApplicationContext applicationContext) {

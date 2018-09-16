@@ -18,7 +18,7 @@ public class AutowireMainConfig2 {
 	 * @return
 	 */
 	@Bean
-	public Color color(@Autowired Car car) {
+	public Color color(/*@Autowired*/ Car car) {
 		Color color = new Color();
 		color.setCar(car);//这个car是容器中的car
 		return color;
